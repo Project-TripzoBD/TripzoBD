@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370621306122",
+    "firebase_url": "https://tripzobd-default-rtdb.firebaseio.com",
+    "project_id": "tripzobd",
+    "storage_bucket": "tripzobd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370621306122:android:b4676af85fd48d237dd6f3",
+        "android_client_info": {
+          "package_name": "tripzobd.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370621306122-tgtck720a05acku454obq08fadg1n0tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBtc7m1RAygSlMiLr9RJkm6P-bxRHTrzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370621306122-tgtck720a05acku454obq08fadg1n0tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
