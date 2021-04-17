@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".select_package_loction">
+
+
+    //Select city
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        //Starting from
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tienne"
+                android:text="Select Pickup Point"
+                android:textColor="@color/Black"
+                android:textSize="20dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/cityandpickuppoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ex. Dhaka - Mohakhali"
+                android:completionThreshold="3"
+                android:fontFamily="@font/tienne"
+                android:popupBackground="@color/AliceBlue" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    //visited to
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/tienne"
+            android:text="Visited to"
+            android:textColor="@color/Black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/visitedto"
+            android:layout_width="370dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/spinner_design"
+            android:entries="@array/visitedcities"
+            android:fontFamily="@font/tienne"></Spinner>
+    </LinearLayout>
+
+
+    //travellers
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/tienne"
+            android:text="Travellers*"
+            android:textColor="@color/Black"
+            android:textSize="20dp" />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1"
+                android:textStyle="bold"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector_selectpackage"
+                android:elevation="4dp"
+                android:padding="17dp"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 2"
+                android:textStyle="bold"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector_selectpackage"
+                android:padding="17dp"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 3"
+                android:textStyle="bold"
+                android:padding="17dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector_selectpackage"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 4"
+                android:textStyle="bold"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector_selectpackage"
+                android:padding="17dp"
+                android:layout_margin="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 5"
+                android:textStyle="bold"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector_selectpackage"
+                android:padding="17dp"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/tienne"
+            android:textStyle="bold"
+            android:text="*Select travellers with child. Child age must be into 0 to 11 years"
+            android:textColor="@color/Red"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/black"
+        android:text="Next"
+        android:textColor="@color/white" />
+
+
+    <EditText
+        android:id="@+id/edi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+
+</LinearLayout>
