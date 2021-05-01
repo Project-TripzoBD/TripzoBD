@@ -1,129 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/WhiteSmoke"
-    android:orientation="vertical"
-    tools:context=".Homepage">
 
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Homepage">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/IndianRed">
-            <include layout="@layout/toolbar" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book"
+                    android:textColor="@color/ForestGreen"
+                    android:fontFamily="@font/audiowide"
+                    android:textSize="43dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="your bus tickets"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="@drawable/buslogo"/>
+
         </LinearLayout>
 
+
+        //Enter Source
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:layout_marginTop="-40dp"
-            android:background="@drawable/toolbar_corner_rectangle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_my_location_24" />
 
             <LinearLayout
-                android:layout_width="55dp"
-                android:layout_height="65dp"
-                android:layout_marginLeft="30dp"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_flight_takeoff_24" />
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Flights"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/tienne"/>
+                    android:text="Enter Source"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17dp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex. Mohakhali - Dhaka"
+                    android:completionThreshold="3"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:popupBackground="@color/white" />
+
+
             </LinearLayout>
+        </LinearLayout>
+
+
+        //Enter Destination
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_location_on_24" />
 
             <LinearLayout
-                android:layout_width="55dp"
-                android:layout_height="65dp"
-                android:layout_marginLeft="30dp"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_apartment_24" />
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hotels"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/tienne"/>
+                    android:text="Enter Destination"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17dp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex. Mohakhali - Dhaka"
+                    android:completionThreshold="3"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:popupBackground="@color/white" />
+
+
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Journey"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tienne"
+                android:textSize="18dp"/>
 
             <LinearLayout
-                android:layout_width="55dp"
-                android:layout_height="65dp"
-                android:layout_marginLeft="30dp"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_train_bus_24" />
+                    android:background="@drawable/ic_baseline_calender_24" />
 
-                <TextView
-                    android:layout_width="50dp"
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="    Train\n    &amp; Bus"
-                    android:textSize="11dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/tienne"/>
+                    android:hint="Select Date"
+                    android:fontFamily="@font/tienne"
+                    android:layout_marginLeft="10dp"/>
+
+
+
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="55dp"
-                android:layout_height="65dp"
-                android:layout_marginLeft="30dp"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_sharp_holiday_package_24" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="  Holiday\n  Package"
-                    android:textSize="10dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/tienne"/>
-            </LinearLayout>
-
-
-
 
         </LinearLayout>
 
+
+        <Button
+            android:id="@+id/reg_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="Search"
+            android:textStyle="bold"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
-</LinearLayout>
+
+</ScrollView>
