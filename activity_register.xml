@@ -11,33 +11,50 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/register_img"
-            android:layout_width="228dp"
-            android:layout_height="196dp"
-            android:src="@drawable/registerimg" />
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/logo1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:backgroundTint="@color/ForestGreen"/>
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/black_ops_one"
-            android:text="Hello there, welcome"
-            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/audiowide"
+            android:text="SIGN UP"
             android:textColor="@color/Black"
-            android:textSize="35sp" />
+            android:textSize="50dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/audiowide"
+            android:text=" Welcome, in our family!"
+            android:textColor="@color/Black"
+            android:textSize="14dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
 
-
-            //Email
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/reg_email"
@@ -60,7 +77,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             //phone no
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/reg_phone"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
                 android:hint="Enter your phone number"
-                app:boxStrokeColor="@color/Black"
+                app:boxStrokeColor="@color/ForestGreen"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/Black"
@@ -82,17 +98,16 @@
                     android:textColor="@color/Black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            //password
-
+            //Password
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/reg_pass"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
+                android:fontFamily="@font/tienne"
                 android:hint="Password"
-                app:boxStrokeColor="@color/Black"
+                app:boxStrokeColor="@color/ForestGreen"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/Black"
@@ -104,20 +119,47 @@
                     android:fontFamily="@font/tienne"
                     android:inputType="textPassword"
                     android:textColor="@color/Black" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/reg_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/black"
-                android:text="REGISTER"
-                android:textColor="@color/white" />
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/reg_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="SIGN UP"
+            android:textStyle="bold"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/tienne"
+                android:text="               By pressing login button you'll accept our"
+                android:textColor="@color/Black"
+                android:textSize="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/tienne"
+                android:text=" privacy policy"
+                android:textColor="@color/Blue"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+
+
 
     </LinearLayout>
+
 
 </ScrollView>

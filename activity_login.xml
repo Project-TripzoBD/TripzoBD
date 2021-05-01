@@ -12,36 +12,51 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="38dp"
-            android:layout_height="55dp"
-            android:padding="5dp"
-            android:src="@drawable/back_button" />
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/logo1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:backgroundTint="@color/ForestGreen"/>
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/black_ops_one"
-            android:text="Login"
-            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/audiowide"
+            android:text="LOGIN"
             android:textColor="@color/Black"
-            android:textSize="40sp" />
+            android:textSize="50dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/audiowide"
+            android:text=" Welcome back!"
+            android:textColor="@color/Black"
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
 
             //phone no
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginphone"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -49,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
                 android:hint="Enter your phone number"
-                app:boxStrokeColor="@color/Black"
+                app:boxStrokeColor="@color/ForestGreen"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/Black"
@@ -63,8 +78,7 @@
                     android:textColor="@color/Black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            //password
-
+            //Password
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginpass"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -73,7 +87,7 @@
                 android:layout_marginTop="8sp"
                 android:fontFamily="@font/tienne"
                 android:hint="Password"
-                app:boxStrokeColor="@color/Black"
+                app:boxStrokeColor="@color/ForestGreen"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/Black"
@@ -86,11 +100,10 @@
                     android:inputType="textPassword"
                     android:textColor="@color/Black" />
 
-
             </com.google.android.material.textfield.TextInputLayout>
 
-            //Remember me and Forget password
 
+            //remember me and forget password
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -119,28 +132,49 @@
 
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/loginbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/black"
-                android:text="LOGIN"
-                android:textColor="@color/white" />
-
-
-            <TextView
-                android:id="@+id/login_create_account"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Create Account"
-                android:textColor="@color/black"
-                android:textSize="17dp" />
-
-
         </LinearLayout>
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="LOGIN"
+            android:textStyle="bold"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/tienne"
+                android:text="               By pressing login button you'll accept our"
+                android:textColor="@color/Black"
+                android:textSize="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/tienne"
+                android:text=" privacy policy"
+                android:textColor="@color/Blue"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/login_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Create Account"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
 
 
     </LinearLayout>

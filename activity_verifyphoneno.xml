@@ -15,16 +15,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/logo1"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
-            android:fontFamily="@font/black_ops_one"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/audiowide"
             android:text="Verify your phone number"
             android:textAllCaps="true"
             android:textColor="@color/Black"
-            android:textSize="40sp" />
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +54,7 @@
                 android:fontFamily="@font/tienne"
                 android:hint="Enter OTP"
                 android:inputType="text|number"
-                app:boxStrokeColor="@color/Black"
+                app:boxStrokeColor="@color/ForestGreen"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/Black"
@@ -57,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/ForestGreen"
                 android:text="VERIFY"
                 android:textColor="@color/white" />
 
