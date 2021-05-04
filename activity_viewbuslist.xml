@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".viewbuslist"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/amarante"
+            android:text="ADD JOURNEY"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="45dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+
+            //company name
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter bus company name"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tienne"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"/>
+
+
+            <AutoCompleteTextView
+                android:id="@+id/buscompanyname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:completionThreshold="1"
+                android:fontFamily="@font/tienne"
+                android:hint="ex. President Travels"
+                android:popupBackground="@color/white" />
+
+
+
+            //bus id
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter bus ID"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tienne"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/busid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ex. PT1234"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/tienne"
+                android:popupBackground="@color/white" />
+
+            //date
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter journey date"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tienne"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/journeydate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/tienne"
+                android:popupBackground="@color/white" />
+
+            //ticket price
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter ticket price"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tienne"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/ticketp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ex. 500"
+                android:layout_marginLeft="10dp"
+                android:inputType="text|number"
+                android:fontFamily="@font/tienne"
+                android:popupBackground="@color/white" />
+
+            //start and end
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                //start and end point
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter start and end point with time"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="17dp"/>
+
+
+                    //start
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/startpoint"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter START point"
+                            android:completionThreshold="1"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/tienne"
+                            android:popupBackground="@color/white" />
+
+                        <EditText
+                            android:id="@+id/starttime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="ex. 11:00 PM"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/tienne"
+                            android:popupBackground="@color/white" />
+
+                    </LinearLayout>
+
+                    //end
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/endpoint"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:completionThreshold="1"
+                            android:fontFamily="@font/tienne"
+                            android:hint="Enter END point"
+                            android:popupBackground="@color/white" />
+
+                        <EditText
+                            android:id="@+id/endtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="ex. 11:00 PM"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/tienne"
+                            android:popupBackground="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                //pickup points
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Enter pickup points with time"
+                         android:textColor="@color/black"
+                         android:fontFamily="@font/tienne"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="10dp"
+                         android:textSize="17dp"/>
+
+                     //pickup point 1
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:orientation="horizontal">
+
+                         <AutoCompleteTextView
+                             android:id="@+id/ppoint1"
+                             android:layout_width="230dp"
+                             android:layout_height="wrap_content"
+                             android:hint="Pickup point 1"
+                             android:completionThreshold="1"
+                             android:layout_marginLeft="10dp"
+                             android:fontFamily="@font/tienne"
+                             android:popupBackground="@color/white" />
+
+                         <EditText
+                             android:id="@+id/pptime1"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:hint="ex. 11:00 PM"
+                             android:layout_marginLeft="10dp"
+                             android:fontFamily="@font/tienne"
+                             android:popupBackground="@color/white" />
+                     </LinearLayout>
+
+                     //pickup point 2
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:orientation="horizontal">
+
+                         <AutoCompleteTextView
+                             android:id="@+id/ppoint2"
+                             android:layout_width="230dp"
+                             android:layout_height="wrap_content"
+                             android:hint="Pickup point 2"
+                             android:completionThreshold="1"
+                             android:layout_marginLeft="10dp"
+                             android:fontFamily="@font/tienne"
+                             android:popupBackground="@color/white" />
+
+                         <EditText
+                             android:id="@+id/pptime2"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:hint="ex. 11:00 PM"
+                             android:layout_marginLeft="10dp"
+                             android:fontFamily="@font/tienne"
+                             android:popupBackground="@color/white" />
+                     </LinearLayout>
+
+
+
+                 </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="SUBMIT"
+            android:textStyle="bold"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</ScrollView>
