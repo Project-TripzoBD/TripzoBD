@@ -56,6 +56,7 @@ public class viewbuslist extends AppCompatActivity {
         pt1 = (EditText) findViewById(R.id.pptime1);
         pt2 = (EditText) findViewById(R.id.pptime2);
         submitbtn = (Button) findViewById(R.id.submitbutton);
+        
 
         //For bus company
         databaseReference = FirebaseDatabase.getInstance().getReference("Bus company name");

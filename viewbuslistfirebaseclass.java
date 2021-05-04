@@ -23,6 +23,7 @@ public class viewbuslistfirebaseclass {
         this.pickup_point_time_2 = pickup_point_time_2;
     }
 
+
     public String getBus_company_name() {
         return bus_company_name;
     }
