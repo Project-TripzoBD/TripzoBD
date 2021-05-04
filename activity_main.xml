@@ -29,10 +29,9 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circle_red"
-                    android:src="@drawable/ic_bus_1"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/addbuscompany"
                     android:padding="15dp"/>
 
                 <View
@@ -40,14 +39,17 @@
                     android:layout_height="1dp"
                     android:background="@color/thistle"
                     android:layout_marginTop="10dp"/>
-                <TextView
+                <Button
+                    android:id="@+id/addbuscompany"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ADD BUSES"
+                    android:text="ADD BUS\n COMPANY"
                     android:textStyle="bold"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
                     android:padding="5dp"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/teal_200"/>
+                    android:textColor="@color/black"/>
 
 
 
@@ -82,14 +84,17 @@
                     android:layout_height="1dp"
                     android:background="@color/thistle"
                     android:layout_marginTop="10dp"/>
-                <TextView
+                <Button
+                    android:id="@+id/list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ADD CUSTOMER"
+                    android:text="ADD BUS\nSCHEDULE"
+                    android:gravity="center"
+                    android:backgroundTint="@color/white"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/teal_200"/>
+                    android:textColor="@color/black"/>
 
 
 
@@ -126,7 +131,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_blue"
+                    android:background="@drawable/circle_light"
                     android:src="@drawable/ic_location_1"
                     android:padding="15dp"/>
 
@@ -169,7 +174,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_green"
-                    android:src="@drawable/ic_customer_1"
+                    android:src="@drawable/ic_place_1"
                     android:padding="15dp"/>
 
                 <View
@@ -245,6 +250,46 @@
 
 
     </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:id="@+id/notice_1"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_rjb"
+                    android:src="@drawable/ic_notice_1"
+                    android:padding="15dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dark_cyan"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Notice"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/teal_200"/>
+
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
 
 
 
