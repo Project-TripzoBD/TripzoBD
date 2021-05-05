@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLocationBus"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/amarante"
+            android:gravity="center"
+            android:text="JOURNEY LOCATION"
+            android:textColor="@color/black"
+            android:textSize="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FROM"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:completionThreshold="1"
+            android:fontFamily="@font/tienne"
+            android:hint="Enter City"
+            android:popupBackground="@color/white"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TO"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:completionThreshold="1"
+            android:fontFamily="@font/tienne"
+            android:hint="Enter City"
+            android:popupBackground="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Date of Journey"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:layout_marginLeft="10dp"
+            android:textSize="35dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:completionThreshold="1"
+            android:fontFamily="@font/tienne"
+            android:hint="Enter Date 05-05-2021"
+            android:popupBackground="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Date of Return"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:layout_marginLeft="10dp"
+            android:textSize="35dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:completionThreshold="1"
+            android:fontFamily="@font/tienne"
+            android:hint="Optional"
+            android:popupBackground="@color/white"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="SUBMIT"
+            android:textStyle="bold"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
