@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentOption">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#6960EC"
+            android:padding="20sp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/back_button"
+                android:layout_marginRight="350dp"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:includeFontPadding="false"
+                android:text="Payment Information"
+                android:textColor="#ffff"
+                android:fontFamily="@font/audiowide"
+                android:textSize="25sp"
+                android:padding="5sp"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Credit Card"
+        android:textColor="#FF4500"
+        android:fontFamily="@font/tienne"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_baseline_verified_user_24"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/ic_baseline_date_range_24"
+        android:padding="10dp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/card_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Card Number"
+            android:fontFamily="@font/tienne">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableRight="@drawable/ic_outline_person_24"
+                android:drawablePadding="10dp"
+                android:text="3444 5555 9999 1234"
+                android:fontFamily="@font/tienne"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Security Code"
+            android:fontFamily="@font/tienne">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawablePadding="10dp"
+                android:text="1234"
+                android:fontFamily="@font/tienne"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/card_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Expiry Date"
+            android:fontFamily="@font/tienne">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableRight="@drawable/ic_baseline_date_range_24"
+                android:drawablePadding="10dp"
+                android:text="12/12/2024"
+                android:fontFamily="@font/tienne"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Confirm Payment"
+        android:textSize="25dp"
+        android:fontFamily="@font/audiowide"
+        android:textColor="#ffff"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+</LinearLayout>
+
+</ScrollView>
