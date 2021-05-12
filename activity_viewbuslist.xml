@@ -46,10 +46,12 @@
                 android:id="@+id/buscompanyname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:layout_marginLeft="10dp"
                 android:completionThreshold="1"
                 android:fontFamily="@font/tienne"
                 android:hint="ex. President Travels"
+                android:backgroundTint="@color/ForestGreen"
                 android:popupBackground="@color/white" />
 
 
@@ -69,7 +71,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ex. PT1234"
+                android:backgroundTint="@color/ForestGreen"
                 android:layout_marginLeft="10dp"
+                android:inputType="text"
                 android:fontFamily="@font/tienne"
                 android:popupBackground="@color/white" />
 
@@ -88,6 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:inputType="text"
+                android:backgroundTint="@color/ForestGreen"
                 android:fontFamily="@font/tienne"
                 android:popupBackground="@color/white" />
 
@@ -107,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:hint="ex. 500"
                 android:layout_marginLeft="10dp"
-                android:inputType="text|number"
+                android:inputType="number"
+                android:backgroundTint="@color/ForestGreen"
                 android:fontFamily="@font/tienne"
                 android:popupBackground="@color/white" />
 
@@ -143,8 +150,10 @@
                         <AutoCompleteTextView
                             android:id="@+id/startpoint"
                             android:layout_width="230dp"
+                            android:inputType="text"
                             android:layout_height="wrap_content"
                             android:hint="Enter START point"
+                            android:backgroundTint="@color/ForestGreen"
                             android:completionThreshold="1"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/tienne"
@@ -154,7 +163,9 @@
                             android:id="@+id/starttime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:backgroundTint="@color/ForestGreen"
                             android:hint="ex. 11:00 PM"
+                            android:inputType="text"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/tienne"
                             android:popupBackground="@color/white" />
@@ -172,7 +183,9 @@
                             android:layout_width="230dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:backgroundTint="@color/ForestGreen"
                             android:completionThreshold="1"
+                            android:inputType="text"
                             android:fontFamily="@font/tienne"
                             android:hint="Enter END point"
                             android:popupBackground="@color/white" />
@@ -182,6 +195,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="ex. 11:00 PM"
+                            android:inputType="text"
+                            android:backgroundTint="@color/ForestGreen"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/tienne"
                             android:popupBackground="@color/white" />
@@ -215,19 +230,24 @@
 
                          <AutoCompleteTextView
                              android:id="@+id/ppoint1"
-                             android:layout_width="230dp"
+                             android:layout_width="175dp"
                              android:layout_height="wrap_content"
                              android:hint="Pickup point 1"
+                             android:backgroundTint="@color/ForestGreen"
                              android:completionThreshold="1"
+                             android:inputType="text"
                              android:layout_marginLeft="10dp"
                              android:fontFamily="@font/tienne"
                              android:popupBackground="@color/white" />
 
-                         <EditText
+                         <AutoCompleteTextView
                              android:id="@+id/pptime1"
-                             android:layout_width="wrap_content"
+                             android:layout_width="175dp"
                              android:layout_height="wrap_content"
-                             android:hint="ex. 11:00 PM"
+                             android:hint="Pickup point 3"
+                             android:backgroundTint="@color/ForestGreen"
+                             android:completionThreshold="1"
+                             android:inputType="text"
                              android:layout_marginLeft="10dp"
                              android:fontFamily="@font/tienne"
                              android:popupBackground="@color/white" />
@@ -241,19 +261,24 @@
 
                          <AutoCompleteTextView
                              android:id="@+id/ppoint2"
-                             android:layout_width="230dp"
+                             android:layout_width="175dp"
                              android:layout_height="wrap_content"
                              android:hint="Pickup point 2"
+                             android:backgroundTint="@color/ForestGreen"
                              android:completionThreshold="1"
+                             android:inputType="text"
                              android:layout_marginLeft="10dp"
                              android:fontFamily="@font/tienne"
                              android:popupBackground="@color/white" />
 
-                         <EditText
+                         <AutoCompleteTextView
                              android:id="@+id/pptime2"
-                             android:layout_width="wrap_content"
+                             android:layout_width="175dp"
                              android:layout_height="wrap_content"
-                             android:hint="ex. 11:00 PM"
+                             android:hint="Pickup point 4"
+                             android:backgroundTint="@color/ForestGreen"
+                             android:completionThreshold="1"
+                             android:inputType="text"
                              android:layout_marginLeft="10dp"
                              android:fontFamily="@font/tienne"
                              android:popupBackground="@color/white" />
@@ -282,6 +307,78 @@
             android:textStyle="bold"
             android:fontFamily="@font/audiowide"
             android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/joinshow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date - start - end"
+            android:visibility="gone"
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+
+        <EditText
+            android:id="@+id/pickuppoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup points."
+            android:visibility="gone"
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+
+        <EditText
+            android:id="@+id/showp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup points."
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:visibility="gone"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+        <EditText
+            android:id="@+id/showp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup points."
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:visibility="gone"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+
+        <EditText
+            android:id="@+id/showp3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup points."
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:visibility="gone"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+
+        <EditText
+            android:id="@+id/showp4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup points."
+            android:backgroundTint="@color/ForestGreen"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            android:visibility="gone"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
+
 
     </LinearLayout>
 

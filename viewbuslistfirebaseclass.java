@@ -2,13 +2,13 @@ package tripzobd.com;
 
 public class viewbuslistfirebaseclass {
     String bus_company_name, starting_point, ending_point,
-            pickup_point_1, pickup_point_2, ticket_price, bus_id, journey_date,
-            starting_time, ending_time, pickup_point_time_1, pickup_point_time_2;
+            pickup_point_1, pickup_point_2, ticket_price, bus_id, journey_date, starting_time, ending_time, pickup_point_3,
+            pickup_point_4,searchdetails,searchpickup1,searchpickup2,searchpickup3,searchpickup4, all_pickup_points;
 
     public viewbuslistfirebaseclass() {
     }
 
-    public viewbuslistfirebaseclass(String bus_company_name, String starting_point, String ending_point, String pickup_point_1, String pickup_point_2, String ticket_price, String bus_id, String journey_date, String starting_time, String ending_time, String pickup_point_time_1, String pickup_point_time_2) {
+    public viewbuslistfirebaseclass(String bus_company_name, String starting_point, String ending_point, String pickup_point_1, String pickup_point_2, String ticket_price, String bus_id, String journey_date, String starting_time, String ending_time, String pickup_point_3, String pickup_point_4, String searchdetails, String searchpickup1, String searchpickup2, String searchpickup3, String searchpickup4, String all_pickup_points) {
         this.bus_company_name = bus_company_name;
         this.starting_point = starting_point;
         this.ending_point = ending_point;
@@ -19,10 +19,15 @@ public class viewbuslistfirebaseclass {
         this.journey_date = journey_date;
         this.starting_time = starting_time;
         this.ending_time = ending_time;
-        this.pickup_point_time_1 = pickup_point_time_1;
-        this.pickup_point_time_2 = pickup_point_time_2;
+        this.pickup_point_3 = pickup_point_3;
+        this.pickup_point_4 = pickup_point_4;
+        this.searchdetails = searchdetails;
+        this.searchpickup1 = searchpickup1;
+        this.searchpickup2 = searchpickup2;
+        this.searchpickup3 = searchpickup3;
+        this.searchpickup4 = searchpickup4;
+        this.all_pickup_points = all_pickup_points;
     }
-
 
     public String getBus_company_name() {
         return bus_company_name;
@@ -104,20 +109,68 @@ public class viewbuslistfirebaseclass {
         this.ending_time = ending_time;
     }
 
-    public String getPickup_point_time_1() {
-        return pickup_point_time_1;
+    public String getPickup_point_3() {
+        return pickup_point_3;
     }
 
-    public void setPickup_point_time_1(String pickup_point_time_1) {
-        this.pickup_point_time_1 = pickup_point_time_1;
+    public void setPickup_point_3(String pickup_point_3) {
+        this.pickup_point_3 = pickup_point_3;
     }
 
-    public String getPickup_point_time_2() {
-        return pickup_point_time_2;
+    public String getPickup_point_4() {
+        return pickup_point_4;
     }
 
-    public void setPickup_point_time_2(String pickup_point_time_2) {
-        this.pickup_point_time_2 = pickup_point_time_2;
+    public void setPickup_point_4(String pickup_point_4) {
+        this.pickup_point_4 = pickup_point_4;
+    }
+
+    public String getSearchdetails() {
+        return searchdetails;
+    }
+
+    public void setSearchdetails(String searchdetails) {
+        this.searchdetails = searchdetails;
+    }
+
+    public String getSearchpickup1() {
+        return searchpickup1;
+    }
+
+    public void setSearchpickup1(String searchpickup1) {
+        this.searchpickup1 = searchpickup1;
+    }
+
+    public String getSearchpickup2() {
+        return searchpickup2;
+    }
+
+    public void setSearchpickup2(String searchpickup2) {
+        this.searchpickup2 = searchpickup2;
+    }
+
+    public String getSearchpickup3() {
+        return searchpickup3;
+    }
+
+    public void setSearchpickup3(String searchpickup3) {
+        this.searchpickup3 = searchpickup3;
+    }
+
+    public String getSearchpickup4() {
+        return searchpickup4;
+    }
+
+    public void setSearchpickup4(String searchpickup4) {
+        this.searchpickup4 = searchpickup4;
+    }
+
+    public String getAll_pickup_points() {
+        return all_pickup_points;
+    }
+
+    public void setAll_pickup_points(String all_pickup_points) {
+        this.all_pickup_points = all_pickup_points;
     }
 }
 
