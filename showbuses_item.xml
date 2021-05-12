@@ -2,92 +2,222 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/cardviewxml"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp"
+    android:orientation="vertical"
     app:cardElevation="8dp">
 
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/buscompanyxml"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+            android:fontFamily="@font/tienne"
+            android:gravity="center"
+            android:text="President Travels"
+            android:textColor="@color/ForestGreen"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tienne"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="--------------------------------------------------------------------------"
+            android:textColor="@color/black" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Company: "
-                android:textSize="40dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/buscompanyxml"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Anik"
-                android:textSize="30dp"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID: "
-                android:textSize="40dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:orientation="vertical">
+                //Mohakhali - Rajshahi
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/busidxml"
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="Mohakhali"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/black_ops_one"
+                        android:textStyle="bold"
+                        android:text="-"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="Rajshahi"/>
+
+                </LinearLayout>
+
+                //Departure time
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="Departure : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="09 : 00 PM"/>
+
+                </LinearLayout>
+
+                //Arival time
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="Arrival : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/tienne"
+                        android:text="06 : 00 AM"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textSize="30dp"
-                android:textColor="@color/black" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginLeft="25dp"
+                        android:textColor="@color/ForestGreen"
+                        android:fontFamily="@font/tienne"
+                        android:text="৳"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ForestGreen"
+                        android:fontFamily="@font/tienne"
+                        android:text="600"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/busidxml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="27dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="PT12345"/>
+
+                <TextView
+                    android:id="@+id/journeydatexml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="01-05-2021"/>
+
+
+            </LinearLayout>
+
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:background="@color/Silver"
+            android:fontFamily="@font/tienne"
+            android:text="Mohakhali - Shyamoli - Gabtoli - Malibagh - Kallyanpur"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Journey: "
-                android:textSize="40dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="VIEW SEATS"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/journeydatexml"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="22-12-2022"
-                android:textSize="30dp"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
 
     </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

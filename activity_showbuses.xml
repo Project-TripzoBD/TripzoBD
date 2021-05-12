@@ -1,23 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="8dp"
     tools:context=".showbuses">
+
     <EditText
         android:id="@+id/searchreview"
         android:layout_width="match_parent"
+        android:imeOptions="actionSearch"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
         android:layout_height="60dp"
-        android:text="anyting"
-        tools:ignore="MissingConstraints" />
+        android:hint="search"
+        />
+
+    <EditText
+        android:id="@+id/searchreview1"
+        android:layout_width="0dp"
+        android:imeOptions="actionSearch"
+        android:layout_height="0dp"
+        android:hint="search 1"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:backgroundTint="@color/ForestGreen"
+        android:text="CONFIRM"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/butt"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewxml"
-        android:layout_below="@+id/searchreview"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="278dp" />
-</RelativeLayout>
+
+
+</LinearLayout>

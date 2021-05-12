@@ -1,54 +1,108 @@
 package tripzobd.com;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class showbusadapter extends FirebaseRecyclerAdapter<showbusfirebase,showbusadapter.myviewholder> {
+public class showbusadapter extends RecyclerView.Adapter<busshowholder>{
 
-    public showbusadapter(@NonNull FirebaseRecyclerOptions<showbusfirebase> options) {
-        super(options);
+    private Context mContext;
+    List<showbusfirebase> mybusList;
+    List<showbusfirebase> filteredUserDataList;
+
+
+    public showbusadapter(Context mContext, List<showbusfirebase> mybusList) {
+        this.mContext = mContext;
+        this.mybusList = mybusList;
+        this.filteredUserDataList = mybusList;
     }
-
 
     @Override
-    protected void onBindViewHolder(@NonNull myviewholder holder, int i, @NonNull showbusfirebase showbusfirebase) {
-        holder.buscom.setText(showbusfirebase.getBus_company_name());
-        holder.bid.setText(showbusfirebase.getBus_id());
-        holder.jorneyd.setText(showbusfirebase.getJourney_date());
+    public busshowholder onCreateViewHolder(@NonNull ViewGroup ViewGroup, int viewType) {
+
+        View mView = LayoutInflater.from(ViewGroup.getContext()).inflate(R.layout.showbuses_item, ViewGroup, false);
+
+        return new busshowholder(mView);
     }
 
-    @NonNull
     @Override
-    public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.showbuses_item,parent,false);
-        return new myviewholder(view);
+    public void onBindViewHolder(@NonNull busshowholder holder, int position) {
+        holder.buscomadapter.setText(filteredUserDataList.get(position).getBus_company_name());
+        holder.bidadapter.setText(filteredUserDataList.get(position).getBus_id());
+        holder.jdateadapter.setText(filteredUserDataList.get(position).getJourney_date());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return filteredUserDataList.size();
     }
 
 
 
+     //Search working
 
-    class myviewholder extends RecyclerView.ViewHolder{
+    public Filter getFilter(){
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String key = charSequence.toString();
+                if(key.isEmpty()){
+                    filteredUserDataList = mybusList;
+                }
+                else {
+                    List<showbusfirebase> IsFiltered = new ArrayList<>();
+                    for(showbusfirebase row: mybusList){
+                        if(row.getBus_company_name().toLowerCase().contains(key.toLowerCase())){
+                            IsFiltered.add(row);
+                        }
+                    }
+                    filteredUserDataList = IsFiltered;
+                }
+                FilterResults filterResults= new FilterResults();
+                filterResults.values = filteredUserDataList;
+                return filterResults;
+            }
 
-        TextView buscom,bid,jorneyd;
-        public myviewholder(@NonNull View itemView) {
-            super(itemView);
-            buscom=(TextView)itemView.findViewById(R.id.buscompanyxml);
-            bid=(TextView)itemView.findViewById(R.id.busidxml);
-            jorneyd=(TextView)itemView.findViewById(R.id.journeydatexml);
-        }
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults results) {
+
+                filteredUserDataList = (List<showbusfirebase>) results.values;
+                notifyDataSetChanged();
+
+            }
+        };
     }
 
 
+//End search working
 
-    
+
+}
+class busshowholder extends RecyclerView.ViewHolder{
+    TextView buscomadapter, bidadapter, jdateadapter;
+    CardView cardadapter;
+
+    public busshowholder(View itemView) {
+        super(itemView);
+        buscomadapter = itemView.findViewById(R.id.buscompanyxml);
+        bidadapter = itemView.findViewById(R.id.busidxml);
+        jdateadapter = itemView.findViewById(R.id.journeydatexml);
+        cardadapter = itemView.findViewById(R.id.cardviewxml);
+    }
+
+
 }
