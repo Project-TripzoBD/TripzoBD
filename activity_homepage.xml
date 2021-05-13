@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".Homepage">
@@ -73,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Enter Source"
+                    android:inputType="text"
                     android:textColor="@color/black"
                     android:fontFamily="@font/tienne"
                     android:layout_marginLeft="10dp"
@@ -82,11 +82,13 @@
                     android:id="@+id/source"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="ex. Mohakhali - Dhaka"
-                    android:completionThreshold="3"
+                    android:inputType="text"
                     android:layout_marginLeft="10dp"
+                    android:completionThreshold="1"
                     android:fontFamily="@font/tienne"
-                    android:popupBackground="@color/white" />
+                    android:hint="ex. Mohakhali"
+                    android:backgroundTint="@color/ForestGreen"
+                    android:popupBackground="@color/white"  />
 
 
             </LinearLayout>
@@ -123,11 +125,13 @@
                     android:id="@+id/destination"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="ex. Mohakhali - Dhaka"
-                    android:completionThreshold="3"
+                    android:inputType="text"
                     android:layout_marginLeft="10dp"
+                    android:completionThreshold="1"
                     android:fontFamily="@font/tienne"
-                    android:popupBackground="@color/white" />
+                    android:hint="ex. Panchagarh"
+                    android:backgroundTint="@color/ForestGreen"
+                    android:popupBackground="@color/white"  />
 
 
             </LinearLayout>
@@ -161,9 +165,13 @@
                     android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Select Date"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+                    android:completionThreshold="1"
                     android:fontFamily="@font/tienne"
-                    android:layout_marginLeft="10dp"/>
+                    android:hint="Select date"
+                    android:backgroundTint="@color/ForestGreen"
+                    android:popupBackground="@color/white" />
 
 
 
@@ -173,7 +181,7 @@
 
 
         <Button
-            android:id="@+id/reg_signup"
+            android:id="@+id/searchxml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -182,6 +190,17 @@
             android:textStyle="bold"
             android:fontFamily="@font/audiowide"
             android:textColor="@color/white" />
+
+
+        <EditText
+            android:id="@+id/bookjoinxml"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="ex. Mohakhali - Dhaka"
+            android:completionThreshold="3"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/tienne"
+            android:popupBackground="@color/white" />
 
     </LinearLayout>
 

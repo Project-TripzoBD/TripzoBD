@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -31,7 +33,8 @@ public class Homepage extends AppCompatActivity {
     ValueEventListener listener;
     ArrayAdapter<String> adapter;
     ArrayList<String> spinnerDataList;
-    EditText journeydate;
+    EditText journeydate, joindetails;
+    Button searchbtn;
     DatePickerDialog.OnDateSetListener setListener;
 
 
@@ -46,7 +49,8 @@ public class Homepage extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
         autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.source);
         autoCompleteTextView2 = (AutoCompleteTextView) findViewById(R.id.destination);
-
+        searchbtn =(Button) findViewById(R.id.searchxml);
+        joindetails = (EditText) findViewById(R.id.bookjoinxml);
         journeydate = findViewById(R.id.date);
         Calendar calendar = Calendar.getInstance();
 
@@ -58,6 +62,7 @@ public class Homepage extends AppCompatActivity {
         retriveData();
 
 
+        //journey date
        final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
@@ -69,12 +74,31 @@ public class Homepage extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int day) {
                         month = month+1;
-                        String date = day+"/"+month+"/"+year;
+                        String date = day+"-"+month+"-"+year;
                        journeydate.setText(date);
                     }
                 },year,month,day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.show();
+            }
+        });
+
+        //search button
+        searchbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String stpoint = autoCompleteTextView1.getText().toString().trim();
+                String endpoint = autoCompleteTextView2.getText().toString().trim();
+                String jordate = journeydate.getText().toString().trim();
+
+                //String searchdetails = jordate+"/"+stpoint+"/"+endpoint;
+                String searchdetails = "From : "+stpoint+"\n To : "+endpoint+"\n Date : "+jordate;;
+                joindetails.setText(searchdetails);
+
+                Intent intent = new Intent(Homepage.this,showbuses.class);
+                intent.putExtra("keyname",searchdetails);
+                startActivity(intent);
             }
         });
 
@@ -103,4 +127,5 @@ public class Homepage extends AppCompatActivity {
             }
         });
     }
+
 }
