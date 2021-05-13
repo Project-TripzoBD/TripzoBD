@@ -12,6 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,7 +27,8 @@ import java.util.Calendar;
 
 public class viewbuslist extends AppCompatActivity {
 
-    AutoCompleteTextView buscompany, sp, ep, pp1, pp2,pt1, pt2;
+    AutoCompleteTextView buscompany ;
+    Spinner  sp, ep,pp1, pp2,pt1, pt2;
     EditText bid,jd, tp, st, et,  join, pickup, spp1, spp2, spp3, spp4;
     Button submitbtn;
     FirebaseDatabase rootNode;
@@ -47,10 +49,10 @@ public class viewbuslist extends AppCompatActivity {
         setContentView(R.layout.activity_viewbuslist);
 
         buscompany = (AutoCompleteTextView) findViewById(R.id.buscompanyname);
-        sp = (AutoCompleteTextView) findViewById(R.id.startpoint);
-        ep = (AutoCompleteTextView) findViewById(R.id.endpoint);
-        pp1 = (AutoCompleteTextView) findViewById(R.id.ppoint1);
-        pp2 = (AutoCompleteTextView) findViewById(R.id.ppoint2);
+        sp = (Spinner) findViewById(R.id.startpoint);
+        ep = (Spinner) findViewById(R.id.endpoint);
+        pp1 = (Spinner) findViewById(R.id.ppoint1);
+        pp2 = (Spinner) findViewById(R.id.ppoint2);
         bid = (EditText) findViewById(R.id.busid);
         jd = (EditText) findViewById(R.id.journeydate);
         tp = (EditText) findViewById(R.id.ticketp);
@@ -61,8 +63,8 @@ public class viewbuslist extends AppCompatActivity {
         spp3 = (EditText) findViewById(R.id.showp3);
         spp4 = (EditText) findViewById(R.id.showp4);
         pickup = (EditText) findViewById(R.id.pickuppoints);
-        pt1 = (AutoCompleteTextView) findViewById(R.id.pptime1);
-        pt2 = (AutoCompleteTextView) findViewById(R.id.pptime2);
+        pt1 = (Spinner) findViewById(R.id.pptime1);
+        pt2 = (Spinner) findViewById(R.id.pptime2);
         submitbtn = (Button) findViewById(R.id.submitbutton);
         join = (EditText) findViewById(R.id.joinshow);
 
@@ -124,32 +126,31 @@ public class viewbuslist extends AppCompatActivity {
 
 
                 String bus_company_name = buscompany.getText().toString().trim();
-                String starting_point = sp.getText().toString().trim();
-                String ending_point = ep.getText().toString().trim();
-                String pickup_point_1 = pp1.getText().toString().trim();
-                String pickup_point_2 = pp2.getText().toString().trim();
+                String starting_point = sp.getSelectedItem().toString().trim();
+                String ending_point = ep.getSelectedItem().toString().trim();
+                String pickup_point_1 = pp1.getSelectedItem().toString().trim();
+                String pickup_point_2 = pp2.getSelectedItem().toString().trim();
                 String ticket_price = tp.getText().toString().trim();
                 String bus_id = bid.getText().toString().trim();
                 String journey_date = jd.getText().toString().trim();
                 String starting_time = st.getText().toString().trim();
                 String ending_time = et.getText().toString().trim();
-                String pickup_point_3= pt1.getText().toString().trim();
-                String pickup_point_4 = pt2.getText().toString().trim();
+                String pickup_point_3= pt1.getSelectedItem().toString().trim();
+                String pickup_point_4 = pt2.getSelectedItem().toString().trim();
 
-
-                String searchdetails = journey_date+"/"+starting_point+"/"+ending_point;
+                String searchdetails = "From : "+starting_point+"\n To : "+ending_point+"\n Date : "+journey_date;
                 join.setText(searchdetails);
 
-                String searchpickup1 = journey_date+"/"+pickup_point_1+"/"+ending_point;
+                String searchpickup1 = "From : "+pickup_point_1+"\n To : "+ending_point+"\n Date : "+journey_date;
                 spp1.setText(searchpickup1);
 
-                String searchpickup2 = journey_date+"/"+pickup_point_2+"/"+ending_point;
+                String searchpickup2 = "From : "+pickup_point_2+"\n To : "+ending_point+"\n Date : "+journey_date;
                 spp2.setText(searchpickup2);
 
-                String searchpickup3 = journey_date+"/"+pickup_point_3+"/"+ending_point;
+                String searchpickup3 = "From : "+pickup_point_3+"\n To : "+ending_point+"\n Date : "+journey_date;
                 spp3.setText(searchpickup3);
 
-                String searchpickup4 = journey_date+"/"+pickup_point_4+"/"+ending_point;
+                String searchpickup4 = "From : "+pickup_point_4+"\n To : "+ending_point+"\n Date : "+journey_date;
                 spp4.setText(searchpickup4);
 
                 String all_pickup_points = starting_point+" - "+pickup_point_1+" - "+pickup_point_2+" - "+
@@ -163,11 +164,9 @@ public class viewbuslist extends AppCompatActivity {
                         pickup_point_4,searchdetails,searchpickup1,searchpickup2,searchpickup3,searchpickup4, all_pickup_points);
 
                 databaseReference.child(bus_id).setValue(firebaseClass);
-                //databaseReference.child(journey_date).child(bus_id).child(pickup_point_1).setValue(firebaseClass);
-                //databaseReference.child(journey_date).child(bus_id).child(pickup_point_2).setValue(firebaseClass);
 
-                buscompany.setText(""); sp.setText(""); ep.setText(""); pp1.setText(""); pp2.setText(""); tp.setText("");
-                bid.setText(""); jd.setText(""); st.setText(""); et.setText(""); pt1.setText(""); pt2.setText("");
+                buscompany.setText(""); sp.setSelection(0); ep.setSelection(0); tp.setText(""); pp1.setSelection(0); pp2.setSelection(0);
+                pt1.setSelection(0); pt2.setSelection(0);bid.setText(""); jd.setText(""); st.setText(""); et.setText("");
 
 
                 Toast.makeText(viewbuslist.this,"Data submitted successfully", Toast.LENGTH_SHORT).show();
