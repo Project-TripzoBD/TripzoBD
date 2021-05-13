@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,6 +21,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,7 +39,7 @@ public class showbuses extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private ValueEventListener eventListener;
     ProgressDialog progressDialog;
-    EditText searchView,searchView1;
+    EditText searchView, searchView1;
     Button btn;
     CharSequence search="";
 
@@ -58,13 +61,6 @@ public class showbuses extends AppCompatActivity {
         searchView.setText(searchdata);
         btn = (Button) findViewById(R.id.butt);
 
-       // btn.setOnClickListener(new View.OnClickListener() {
-           // @Override
-           // public void onClick(View v) {
-             //   String sview = searchView.getText().toString().trim();
-               // searchView1.setText(sview);
-           // }
-        //});
 
 
 
@@ -134,6 +130,7 @@ public class showbuses extends AppCompatActivity {
 
 
         });
+
 
     }
 

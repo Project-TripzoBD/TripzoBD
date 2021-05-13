@@ -4,10 +4,12 @@
     android:layout_height="wrap_content"
     android:id="@+id/cardviewxml"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="8dp"
     app:cardCornerRadius="15dp"
     android:orientation="vertical"
-    app:cardElevation="8dp">
+    app:cardElevation="30dp">
 
 
     <LinearLayout
@@ -40,12 +42,12 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 //Mohakhali - Rajshahi
@@ -57,9 +59,10 @@
 
 
                     <TextView
+                        android:id="@+id/stptxml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="22dp"
+                        android:textSize="20dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
                         android:text="Mohakhali"/>
@@ -74,9 +77,10 @@
                         android:textStyle="bold"
                         android:text="-"/>
                     <TextView
+                        android:id="@+id/edptxml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="22dp"
+                        android:textSize="20dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
                         android:text="Rajshahi"/>
@@ -92,23 +96,37 @@
 
 
                     <TextView
+                        android:id="@+id/sttmxml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
-                        android:text="Departure : "/>
+                        android:text="09:00 PM"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/black_ops_one"
+                        android:textStyle="bold"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/edtmxml"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
-                        android:text="09 : 00 PM"/>
+                        android:text="07:00 AM"/>
 
                 </LinearLayout>
 
-                //Arival time
+                //Date
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,25 +137,130 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
-                        android:text="Arrival : "/>
+                        android:text="Date : "/>
                     <TextView
+                        android:id="@+id/journeydatexml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
+                        android:layout_marginLeft="10dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/tienne"
-                        android:text="06 : 00 AM"/>
+                        android:text="01-05-2021"/>
+
 
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/busidxml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="PT12345"/>
+                <TextView
+                    android:id="@+id/pip1txml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="pickup point 1"/>
+                <TextView
+                    android:id="@+id/pip2txml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="pickup point 2"/>
+                <TextView
+                    android:id="@+id/pip3txml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="pickup point 3"/>
+                <TextView
+                    android:id="@+id/pip4txml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="pickup point 4"/>
+                <TextView
+                    android:id="@+id/sedtxml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="search details"/>
+                <TextView
+                    android:id="@+id/sepk1xml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="search pickup 1"/>
+                <TextView
+                    android:id="@+id/sepk2xml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="search pickup 2"/>
+                <TextView
+                    android:id="@+id/sepk3xml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="search pickup 3"/>
+                <TextView
+                    android:id="@+id/sepk4xml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tienne"
+                    android:text="search pickup 4"/>
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -148,55 +271,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
+                        android:textStyle="bold"
                         android:layout_marginTop="17dp"
-                        android:layout_marginLeft="25dp"
                         android:textColor="@color/ForestGreen"
                         android:fontFamily="@font/tienne"
                         android:text="৳"/>
 
                     <TextView
+                        android:id="@+id/takaxml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
                         android:layout_marginTop="17dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textStyle="bold"
                         android:textColor="@color/ForestGreen"
                         android:fontFamily="@font/tienne"
-                        android:text="600"/>
+                        android:text="1600"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/busidxml"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="27dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/tienne"
-                    android:text="PT12345"/>
-
-                <TextView
-                    android:id="@+id/journeydatexml"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="16dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/tienne"
-                    android:text="01-05-2021"/>
-
-
             </LinearLayout>
-
-
 
         </LinearLayout>
 
 
         <TextView
+            android:id="@+id/allptxml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -207,15 +307,15 @@
             android:text="Mohakhali - Shyamoli - Gabtoli - Malibagh - Kallyanpur"/>
 
         <Button
+            android:id="@+id/viewseatnext"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="2dp"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:backgroundTint="@color/ForestGreen"
-            android:text="VIEW SEATS"
             android:textStyle="bold"
+            android:backgroundTint="@color/ForestGreen"
+            android:text="View Details"
             android:textColor="@color/white" />
-
 
     </LinearLayout>
 
