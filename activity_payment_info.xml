@@ -42,6 +42,25 @@
                 android:padding="5sp"/>
 
         </RelativeLayout>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            android:textColor="#FF4500"
+            android:fontFamily="@font/tienne"
+            android:textAlignment="gravity"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/mark"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/cardicon"
+            android:padding="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginTop="40dp"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"/>
 
         <EditText
             android:id="@+id/textViewCardNumber"
@@ -54,7 +73,8 @@
             android:textSize="20dp"
             android:inputType="number"
             android:hint="Card Number"
-            android:fontFamily="@font/tienne" />
+            android:fontFamily="@font/tienne"
+            android:drawableRight="@drawable/number"/>
 
         <EditText
             android:id="@+id/textViewCvvNumber"
@@ -64,6 +84,7 @@
             android:textSize="20dp"
             android:inputType="number"
             android:hint="CVV Number"
+            android:drawableRight="@drawable/cvv"
             android:fontFamily="@font/tienne"/>
 
 
@@ -74,6 +95,7 @@
             android:layout_margin="20dp"
             android:hint="Expiry Date(MM/YY)"
             android:inputType="date"
+            android:drawableRight="@drawable/calendar"
             android:textSize="20dp"
             android:fontFamily="@font/tienne"/>
 
