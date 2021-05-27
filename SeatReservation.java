@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ public class SeatReservation extends AppCompatActivity {
     int totalSeats = 0;
     TextView totalPrice;
     TextView totalBookedSeats;
+    TextView sep, stap, enp, stat, dattime,allpic;
     private Button buttonBook;
 
     private FirebaseAuth firebaseAuth;
@@ -36,50 +39,72 @@ public class SeatReservation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Hide action bar and title bar
+        requestWindowFeature(getWindow().FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        //thats all
         setContentView(R.layout.activity_seat_reservation);
         getSupportActionBar().setTitle("Select Your Favorite Seats");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        firebaseAuth= FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         totalBookedSeats = (TextView) findViewById(R.id.total_seats);
         totalPrice = (TextView) findViewById(R.id.total_cost);
         buttonBook = (Button) findViewById(R.id.btnBook);
+        sep = (TextView) findViewById(R.id.buscid);
+        stap = (TextView) findViewById(R.id.startp);
+        enp = (TextView) findViewById(R.id.endp);
+        stat = (TextView) findViewById(R.id.starttime1);
+        dattime = (TextView) findViewById(R.id.date1);
+        allpic = (TextView) findViewById(R.id.allp);
+
+        String date = getIntent().getStringExtra("date");
+        dattime.setText(date);
+
+        String stt = getIntent().getStringExtra("stt");
+        stat.setText(stt);
+
+        String start = getIntent().getStringExtra("start");
+        stap.setText(start);
+
+        String end = getIntent().getStringExtra("end");
+        enp.setText(end);
+
+        String allpickup = getIntent().getStringExtra("allpickup");
+        allpic.setText(allpickup);
+
+        String busid = getIntent().getStringExtra("ty");
+        sep.setText(busid);
+        seatPrice = Double.parseDouble(busid);
 
         //Set Event
         setToggleEvent(mainGrid);
-        final String nameBus=getIntent().getStringExtra("NAME_BUS");
-        final String dateBus=getIntent().getStringExtra("DATE_BUS");
-        final String conditionBus=getIntent().getStringExtra("CONDITION_BUS");
 
         buttonBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String totalPriceI=totalPrice.getText().toString().trim();
-                String totalBookedSeatsI=totalBookedSeats.getText().toString().trim();
+                Intent intent = new Intent(SeatReservation.this,PaymentInfo.class);
+                startActivity(intent);
 
-                PaymentDetail paymentDetail=new PaymentDetail(totalPriceI,totalBookedSeatsI);
+                String totalPriceI = totalPrice.getText().toString().trim();
+                String totalBookedSeatsI = totalBookedSeats.getText().toString().trim();
 
-                FirebaseUser user=firebaseAuth.getCurrentUser();
+                PaymentDetail paymentDetail = new PaymentDetail(totalPriceI, totalBookedSeatsI);
+
+                FirebaseUser user = firebaseAuth.getCurrentUser();
                 databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
 
-                Intent intent=new Intent(SeatReservation.this,PaymentMethod.class);
-                intent.putExtra("TOTALCOST",totalPriceI);
-                intent.putExtra("TOTALSEAT",totalBookedSeatsI);
-
-                intent.putExtra("NAME_BUS",nameBus);
-                intent.putExtra("DATE_BUS",dateBus);
-                intent.putExtra("CONDITION_BUS",conditionBus);
-
-                startActivity(intent);
 
             }
         });
 
     }
+
     private void setToggleEvent(GridLayout mainGrid) {
         //Loop all child item of Main Grid
         for (int i = 0; i < mainGrid.getChildCount(); i++) {
@@ -103,7 +128,7 @@ public class SeatReservation extends AppCompatActivity {
                         --totalSeats;
                         Toast.makeText(SeatReservation.this, "You Unselected Seat Number :" + (finalI + 1), Toast.LENGTH_SHORT).show();
                     }
-                    totalPrice.setText("" + totalCost+"0");
+                    totalPrice.setText("" + totalCost + "0");
                     totalBookedSeats.setText("" + totalSeats);
                 }
             });
