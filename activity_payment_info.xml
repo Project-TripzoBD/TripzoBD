@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".PaymentInfo">
 
     <LinearLayout
@@ -14,73 +15,68 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="#6960EC"
+            android:layout_height="80dp"
+            android:background="@color/ForestGreen"
             android:padding="20sp">
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:src="@drawable/back"
-                android:layout_marginRight="350dp"
-                android:layout_marginTop="5dp"/>
-
 
             <TextView
                 android:id="@+id/pay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:includeFontPadding="false"
                 android:text="Payment Information"
                 android:textColor="#ffff"
                 android:fontFamily="@font/audiowide"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textAlignment="gravity"
                 android:padding="5sp"/>
 
         </RelativeLayout>
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Credit Card"
-            android:textColor="#FF4500"
-            android:fontFamily="@font/tienne"
-            android:textAlignment="gravity"
-            android:textStyle="bold"
-            android:drawableLeft="@drawable/mark"
-            android:drawablePadding="20dp"
-            android:drawableRight="@drawable/cardicon"
-            android:padding="10dp"
-            android:includeFontPadding="false"
-            android:layout_marginTop="40dp"
-            android:textSize="30dp"
+            android:layout_height="92dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="10dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:drawableLeft="@drawable/mark"
+            android:drawableRight="@drawable/cardicon"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/tienne"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="Credit Card"
+            android:textAlignment="gravity"
+            android:textColor="#FF4500"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
 
         <EditText
-            android:id="@+id/textViewCardNumber"
+            android:id="@+id/cardnumberxml"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_height="65dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:textSize="20dp"
-            android:inputType="number"
-            android:hint="Card Number"
+            android:backgroundTint="@color/ForestGreen"
+            android:drawableRight="@drawable/credit_card_24"
             android:fontFamily="@font/tienne"
-            android:drawableRight="@drawable/number"/>
+            android:hint="Card Number"
+            android:inputType="number"
+            android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/textViewCvvNumber"
+            android:id="@+id/cvvxml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:backgroundTint="@color/ForestGreen"
             android:textSize="20dp"
             android:inputType="number"
             android:hint="CVV Number"
@@ -89,13 +85,14 @@
 
 
         <EditText
-            android:id="@+id/textViewDate"
+            android:id="@+id/expirydatexml"
             android:layout_width="match_parent"
             android:layout_height="69dp"
             android:layout_margin="20dp"
             android:hint="Expiry Date(MM/YY)"
             android:inputType="date"
-            android:drawableRight="@drawable/calendar"
+            android:backgroundTint="@color/ForestGreen"
+            android:drawableRight="@drawable/calendar24"
             android:textSize="20dp"
             android:fontFamily="@font/tienne"/>
 
@@ -105,11 +102,110 @@
             android:layout_height="60dp"
             android:layout_marginLeft="20dp"
             android:textSize="25dp"
+            android:backgroundTint="@color/ForestGreen"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:text="Next"
             android:fontFamily="@font/audiowide"/>
 
+
+        <TextView
+            android:id="@+id/tppaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="ticketprice"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/startpaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="startingpoint"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/endpaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="endingpoint"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/starttimepaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="starting time"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/datepaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="date"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/allpaymentxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="allpoint"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/idbusxml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="busid"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/busnamexml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tienne"
+            android:text="busid"
+            tools:ignore="MissingConstraints" />
 
     </LinearLayout>
 
