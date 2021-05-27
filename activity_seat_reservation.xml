@@ -1190,10 +1190,86 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
+        android:backgroundTint="@color/ForestGreen"
         android:ems="10"
         android:fontFamily="@font/audiowide"
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="CONFIRM"/>
+
+    <TextView
+        android:id="@+id/buscid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="ticketprice"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/startp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="startingpoint"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/endp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="endingpoint"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/starttime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="starting time"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="date"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/allp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility = "gone"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/tienne"
+        android:text="date"
+        tools:ignore="MissingConstraints" />
+
 
 </LinearLayout>
