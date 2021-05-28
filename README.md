@@ -12,6 +12,6 @@ tickets, and pay through online. We have tried to make the project very easy so 
 use it easily. This project have a simple login system and easy payment method.
 
 Available Functions:
-        Admin Application: Admin login, add bus, add location, add bus schedule and send notification.
+        Admin Application: Admin login, add bus, add location, add bus schedule and send notification;
         User Application: User registration and verification by phone number, user login, choose boarding and dropping, 
                           choose bus, choose seat, payment by credit card, print ticket.
