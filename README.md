@@ -1,9 +1,9 @@
 Project name: TripzoBD - Tour management System
 
 Developed by:
-       Pinaki Ranjan Das (1813087642)
-       Abdul Hannan Anik (1812091042)
-       Shaon Kumar Das (1812613042)
+Pinaki Ranjan Das (1813087642)
+Abdul Hannan Anik (1812091042)
+Shaon Kumar Das (1812613042)
        
 Project description:We have developed an Online booking system using Android. But now we are able
 to complete the bus ticket booking system. In future we will extend our project and we will add
